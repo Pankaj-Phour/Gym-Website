@@ -1,0 +1,49 @@
+<div class="body">
+    <div class="navbar">
+        <div class="left">
+            <img src="/assets/logoG.jfif" height="55" width="50" style="cursor: pointer;">
+        </div>
+        <div class="right">
+            <div class="list">
+                <div class="item">Home</div>
+                <div class="item">About us</div>
+                <div class="item">Services</div>
+                <div class="item">Classes</div>
+                <div class="item">Our Team</div>
+                <button class="resumebtn">Join us</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="device" [ngStyle]="{'height':navOpen ? '600px' : '60px'}">
+	<div class="container">
+		<button id="burger" class="open-main-nav" (click)="toggleNav()" [ngStyle]="{'padding-top': navOpen ? '0px' : ''}">
+			<span class="burger" *ngIf="!navOpen"></span>
+            <div class="crossIcon" *ngIf="navOpen" style="padding-top: 0px;"><img src="/assets/cross.png" height="30" width="30" ></div>
+			<!-- <span class="burger-text">Menu</span> -->
+		</button>
+		<nav class="main-nav" id="main-nav">
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">About us</a>
+				</li>
+				<li>
+					<a href="#">Services</a>
+				</li>
+				<li>
+					<a href="#">Classes</a>
+				</li>
+				<li>
+					<a href="#">Our Team</a>
+				</li>
+				<li>
+					<a href="#">Join us</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
