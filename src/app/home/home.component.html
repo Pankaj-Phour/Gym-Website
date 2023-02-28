@@ -36,7 +36,7 @@
                         <img src="/assets/gymB.webp" height="100%" width="100%">
                     </div>
                     <div class="right" #right>
-                        <div class="rightContent" [ngStyle]="{'border-right':right.clientHeight/2 + 'px solid transparent','border-bottom':right.clientHeight+'px solid white','border-left':right.clientHeight/2 + 'px solid transparent'}">
+                        <div class="rightContent" [ngStyle]="{'border-right':i%2!==0 ? right.clientHeight/2 + 'px solid transparent' : '','border-bottom':right.clientHeight+'px solid black'}">
                         </div>
                             <div class="detailText">Weight training is also known as resistance or strength training. It involves moving parts of your body against some kind of resistance, like weights, resistance bands, weight machines, or even your own body weight. Weight training is an excellent way to build muscle mass and make your muscles stronger.</div>
 
