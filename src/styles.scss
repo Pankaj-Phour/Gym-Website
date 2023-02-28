@@ -6,20 +6,32 @@
     padding: 0px;
     margin: 0px;
     font-family: 'roboto';
+    
+}
+@media only screen and (min-width: 768px) {
+*{
+    overflow-x: hidden;
+}
 }
 .resumebtn{
     padding: 8px;
     border: 2px solid #ff3700;
     background-color: transparent;
     color: #ff3700;
-    width: 100px;
+    width: fit-content;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
+    padding-inline: 15px;
 }
 .resumebtn:hover{
     box-shadow: rgba(150, 0, 0, 0.56) 0px 3px 6px 2px;
     background-color: #ff3700;
     color: white;
     // border: 2px solid black;
+}
+.heading{
+    color: #ff3700 !important;
+    font-size: 42px;
+    text-align: center;
 }
