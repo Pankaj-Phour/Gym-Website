@@ -1,0 +1,48 @@
+<div class="body">
+    <div class="parent">
+        <div class="content">
+            <img class="topImage" src="/assets/gymB2.webp" alt="Fitness Theory Background" height="100vh" width="100vw" >
+            <div class="top">
+                <app-navbar></app-navbar>
+            </div>
+            <div class="bottom">
+                <div class="upper">
+                <div class="left">
+                    <div class="text2">Stop <span>Wishing</span></div>
+                    <div class="text2">Start <span>Doing</span></div>
+                    <div class="button">
+                        <button class="resumebtn">Let's Start</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="text1">Shape Your Body</div>
+                    <div class="text2">Be <span style="color:#ff3700">Strong</span></div>
+                    <div class="text2">Train Hard</div>
+                    <div class="button">
+                        <button class="resumebtn">Let's Start</button>
+                    </div>
+                </div>
+                <div class="mobile">Go Hard or Go Home</div>
+            </div>
+                <div class="lower">
+                    <div class="lText1" style="cursor:pointer">Why choose us?</div>
+                    <div class="lText2">Push your limits forward</div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="heading">Classes </div>
+                <div class="section1" *ngFor="let data of classes;let i = index" [ngStyle]="{'display':'flex','flex-direction':i%2==0 ? 'row' : 'row-reverse'}">
+                    <div class="left">
+                        <img src="/assets/gymB.webp" height="100%" width="100%" [alt]="data.desc">
+                    </div>
+                    <div class="right" #right>
+                        <div class="rightContent" [ngStyle]="{'border-right':i%2!==0 ? right.clientHeight/2 + 'px solid transparent' : '','border-bottom':right.clientHeight+'px solid black'}">
+                        </div>
+                            <div class="detailText">Weight training is also known as resistance or strength training. It involves moving parts of your body against some kind of resistance, like weights, resistance bands, weight machines, or even your own body weight. Weight training is an excellent way to build muscle mass and make your muscles stronger.</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

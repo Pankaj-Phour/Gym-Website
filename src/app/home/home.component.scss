@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+    // background: black;
+    color: white;
+    font-family: 'roboto';
+}
+.body{
+    max-width: 100vw;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.parent{
+    max-width: 100vw;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.content{
+    max-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    // background: url('/assets/gymBackground.webp');
+    // background: url('/assets/gymBackground2.avif');
+    // background: url('/assets/gymB2.webp');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.topImage{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    height: 100vh;
+    width: 100vw;
+    object-fit: contain;
+    background-color: black;
+    z-index: -1;
+}
+.bottom{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    min-height: calc(100vh - 79px);
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    // row-gap: 30px;
+}
+.upper{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    // height: 80%;
+    // padding-block: 3%;
+}
+.left{
+    display: flex;
+    max-width: 100%;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 5%;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    max-width: 100%;
+    width: 50%;
+    height: 100%;
+    padding: 5%;
+}
+.lower{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    // padding-top: 5%;
+}
+.text2, .text1{
+    font-size: 52px;
+    color: white;
+    line-height: 1.2;
+    font-weight: 500;
+}
+.text2 span{
+    color: #ff3700;
+}
+.text1{
+    font-size: 17px;
+}
+.lText1{
+    color: #ff3700;
+    font-size: 14px;
+}
+.lText2{
+    color: white;
+    font-size: 21px;
+}
+.button{
+    margin-top: 2%;
+}
+.details{
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 5%;
+    max-width: 100vw;
+    background-color: black;
+    width: 100%;
+
+}
+.section1 .right{
+    background-color: #ff3700;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    // padding: 0;
+    max-width: 100%;
+    width: 45%;
+    border-radius: 20px;
+    // padding: 0;
+}
+.section1 .right:hover{
+    border-radius: 20px;
+    transition: 0.7s ease-in-out;
+}
+.section1 .left{
+    overflow: hidden;
+}
+.section1 .left img:hover{
+    transform: scale(1.3);
+    overflow: hidden;
+    transition: 0.8s ease-in-out;
+    cursor: pointer;
+}
+.rightContent{
+    display: none;
+    height: 0;
+    width: 0;
+    // background-color: gray;
+}
+.detailText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 90%;
+    font-size: 21px;
+    // transform: skew(25deg);
+}
+.detailText:hover{
+    transform: scale(1.1);
+    transition: 0.7s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Media screen CSS for mobile only 
+
+
+@media only screen and (max-width: 768px) {
+    .section1{
+        display: flex;
+        flex-direction: column !important;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+    }
+    .left, .right{
+        width: 100%;
+    }
+    .text1{
+        font-size: 12px;
+    }
+    .text2{
+        font-size: 14px;
+    }
+    .resumebtn{
+        font-size: 13px;
+    }
+    .upper .left, .upper .right{
+        display: none;
+    }
+    .upper .mobile{
+        display: flex;
+        z-index: 3;
+        justify-content: center;
+        width: 100%;
+        font-size: 19px;
+    }
+    .topImage{
+        height: auto;
+        z-index: 2;
+    }
+    .content{
+        background-color: black;
+    }
+    .lower{
+        z-index: 3;
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-block: 20%;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    .rightContent{
+        display: none;
+    }
+    .section1 .right{
+        max-width: 100%;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .detailText{
+        font-size: 13px;
+    }
+}
+.mobile{
+    display: none;
+    font-size: 14px;
+}
