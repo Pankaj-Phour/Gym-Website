@@ -1,0 +1,30 @@
+<div class="body">
+    <div class="parent">
+        <div class="image">
+            <img src="" height="100%" width="100%" alt="" >
+        </div>
+        <div class="left"></div>
+        <div class="right">
+            <div class="form">
+                <form [formGroup]="fatCalculator">
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your Body Weight" formControlName="weight">
+                        <p class="error" *ngIf="fatCalculator.get('weight').hasError('required') && fatCalculator.get('weight').touched"></p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your Height" formControlName="height">
+                        <p class="error" *ngIf="fatCalculator.get('height').hasError('required') && fatCalculator.get('height').touched"></p>
+                    </div>
+                </form>
+                <div class="bottom">
+                    <div class="left"></div>
+                    <div class="right">
+                        <div class="formGroup">
+                            <input type="text" placeholder="Your Body mass">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
