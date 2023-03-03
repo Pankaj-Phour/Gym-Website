@@ -1,26 +1,28 @@
 <div class="body">
     <div class="parent">
-        <div class="image">
+        <!-- <div class="image">
             <img src="" height="100%" width="100%" alt="" >
-        </div>
-        <div class="left"></div>
+        </div> -->
+        <!-- <div class="left"></div> -->
         <div class="right">
             <div class="form">
                 <form [formGroup]="fatCalculator">
                     <div class="formGroup">
-                        <input type="text" placeholder="Enter your Body Weight" formControlName="weight">
+                        <input type="text" placeholder="Enter Body Weight in Kilogram" formControlName="weight" (keydown)="checkValue($event)">
                         <p class="error" *ngIf="fatCalculator.get('weight').hasError('required') && fatCalculator.get('weight').touched"></p>
                     </div>
                     <div class="formGroup">
-                        <input type="text" placeholder="Enter your Height" formControlName="height">
+                        <input type="text" placeholder="Enter Height in cm." formControlName="height" (keydown)="checkValue($event)">
                         <p class="error" *ngIf="fatCalculator.get('height').hasError('required') && fatCalculator.get('height').touched"></p>
                     </div>
                 </form>
                 <div class="bottom">
-                    <div class="left"></div>
-                    <div class="right">
+                    <div class="buttonDiv" >
+                        <button class="resumebtn" (click)="submit()">Check Body Mass</button>
+                    </div>
+                    <div class="result" [formGroup]="resultForm">
                         <div class="formGroup">
-                            <input type="text" placeholder="Your Body mass">
+                            <input type="text" placeholder="Your Body mass index" formControlName="result">
                         </div>
                     </div>
                 </div>
