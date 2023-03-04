@@ -41,6 +41,9 @@
                 </div>
             </div>
 
+            <div class="aboutUs">
+                <app-mass-calculator></app-mass-calculator>
+            </div>
             <div class="details">
                 <div class="heading">Classes </div>
                 <div class="section1" *ngFor="let data of classes;let i = index" [ngStyle]="{'display':'flex','flex-direction':i%2==0 ? 'row' : 'row-reverse'}">
