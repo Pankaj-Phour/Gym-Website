@@ -6,15 +6,16 @@ import { MassCalculatorComponent } from './mass-calculator/mass-calculator.compo
 import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
-  {path:'', component:MassCalculatorComponent},
-  {path:'home', component:HomeComponent},
+  {path:'BMI', component:MassCalculatorComponent},
+  {path:'', component:HomeComponent},
   {path:'top', component:NavbarComponent},
   {path:'footer', component:FooterComponent},
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  // Added hashrouting to load pages on different paths on server 
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
